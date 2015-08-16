@@ -1,5 +1,18 @@
 $(document).ready(function () {
 
+$('#userInput').keydown(function() {
+	if (event.which === 13) {
+		var fizzBuzzLength = $('#userInput').val();
+		$('#userInput').val('');
+		$('p').remove();
+		main(fizzBuzzLength);
+	}
+})
+
+//understand .which
+//understand val()
+
+
 var a = 'Fizz';
 var b = 'Buzz';
 function fizzBuzz (integer) {
